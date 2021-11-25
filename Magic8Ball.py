@@ -59,9 +59,6 @@ while True:
 	print("        `-:::::::::::-'")
 	print("           `'''''''`")
 	print("\n")
-
-
-
 	print("Ask the Magic 8Ball a question!")
 	
 	userQuestion=""
@@ -69,10 +66,16 @@ while True:
 		userQuestion=input("")
 		if userQuestion == "": print("That's not a question!")
 	os.system('cls') #clear screen
+	
+	
+	
 
 	#Contemplating - simulate thinking.
-	responses=open("data/responses.txt",'r').read().splitlines() #Load responses from data/responses.txt
+	responses=open("ProgramData/responses.txt",'r').read().splitlines() #Load responses from ProgramData/responses.txt
 	shakeBall()
+
+
+
 
 	#Answer - provide user with a random answer.
 	print("           _......._")
