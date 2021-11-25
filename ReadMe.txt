@@ -1,5 +1,4 @@
 #### IMPORTANT ####
-
 Please run the following program OUTSIDE of IDLE. User experience will differ inside of an IDLE environment.
 
 *Note*
@@ -12,7 +11,6 @@ import time
 import os
 
 #### OPERATION ####
-
 Download/Pull repository.
 Right click on Magic8Ball.py > Open.
 
