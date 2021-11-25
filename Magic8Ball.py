@@ -4,7 +4,7 @@ import time
 import os
 
 #Functions
-def shakeBall():
+def shakeBall(): #Shakes an ascii 8 ball on the screen.
     i=0
     while i<5:
         print("         _......._")
@@ -43,7 +43,7 @@ def shakeBall():
 
 #Main
 while True:
-	#Ask
+	#Ask - What question does the user have?
 	print("           _......._")
 	print("        .-:::::::::::-.")
 	print("      .:::::::::::::::::.")
@@ -65,16 +65,16 @@ while True:
 	print("Ask the Magic 8Ball a question!")
 	
 	userQuestion=""
-	while userQuestion=="":
+	while userQuestion=="": #Make sure there is a question. If the user typed nothing, loop back and ask again.
 		userQuestion=input("")
 		if userQuestion == "": print("That's not a question!")
 	os.system('cls') #clear screen
 
-	#Contemplating
-	responses=open("data/responses.txt",'r').read().splitlines()
+	#Contemplating - simulate thinking.
+	responses=open("data/responses.txt",'r').read().splitlines() #Load responses from data/responses.txt
 	shakeBall()
 
-	#Answer
+	#Answer - provide user with a random answer.
 	print("           _......._")
 	print("        .-:::::::::::-.")
 	print("      .:::::::::::::::::.")
@@ -93,6 +93,6 @@ while True:
 	print(userQuestion)
 	print("\nThe Magic 8Ball SAYS...\n")
 	time.sleep(1)
-	print(responses[random.randint(0,29)])
+	print(responses[random.randint(0,29)]) #Pick a random response from the file loaded during the 'Contemplating' phase.
 	input("\n\nPress ENTER to ask another question!")
 	os.system('cls') #clear screen
